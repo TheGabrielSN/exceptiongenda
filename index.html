@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exceptiongenda</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Exceptiongenda</h1>
+
+      <div class="header-row">
+        <div class="field">
+          <label for="referenceDate">Data de referência</label>
+          <input type="date" id="referenceDate" />
+        </div>
+
+        <button class="danger-button header-clear-button" id="clearAllButton">
+          Limpar eventos não fixados
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="week-grid" id="weekGrid"></section>
+    </main>
+
+    <footer class="footer-actions">
+      <div class="signature">Feito por ExceptionError</div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
