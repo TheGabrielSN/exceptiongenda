@@ -17,10 +17,16 @@
           <input type="date" id="referenceDate" />
         </div>
 
-        <button class="danger-button header-clear-button" id="clearAllButton">
-          Limpar eventos não fixados
+        <button class="danger-button header-clear-button" id="clearAllButton" type="button">
+          Limpar não fixados
+        </button>
+
+        <button class="secondary-button" id="viewHistoryButton" type="button">
+          Ver histórico
         </button>
       </div>
+
+      <div class="week-info" id="weekInfo"></div>
     </header>
 
     <main>
@@ -30,6 +36,31 @@
     <footer class="footer-actions">
       <div class="signature">Feito por ExceptionError</div>
     </footer>
+  </div>
+
+  <div class="modal-backdrop hidden" id="historyModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>Histórico semanal</h2>
+        <button class="icon-button modal-close" id="closeHistoryModal" type="button">×</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="history-layout">
+          <div class="history-sidebar">
+            <h3>Semanas salvas</h3>
+            <div class="history-dates" id="historyWeeksList"></div>
+          </div>
+
+          <div class="history-content">
+            <div class="history-selected-date" id="historySelectedWeek">
+              Selecione uma semana para visualizar os eventos.
+            </div>
+            <div class="history-preview" id="historyPreview"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
